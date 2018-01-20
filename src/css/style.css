@@ -1,4 +1,115 @@
+@font-face {
+  font-family: SanFranciscoDisplay;
+  src: url('../fonts/SanFranciscoDisplay-Regular.otf') format('opentype');
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: SanFranciscoDisplay, sans-serif;
+  background-color: rgba(0,0,0,.06);
+}
+
+.calculator {
+  width: 200px;
+  height: 325px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px #111;
+  border-radius: 5px;
+}
+
+.calculator-display {
+  height: 75px;
+  line-height: 55px;
+  font-size: 36px;
+  text-align: right;
+  background: rgb(76, 76, 76);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.calculator-key {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.calculator-keypad {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculator-keypad-left {
+  width: 150px;
+}
+
+.calculator-top {
+  flex-direction: row;
+  width: 150px;
+}
+.calculator-top button {
+  background: rgb(214, 214, 214);
+}
+
+.calculator-numbers {
+  flex-wrap: wrap;
+  width: 150px;
+}
+.calculator-numbers button {
+  background: rgb(224, 224, 224);
+}
+
+.calculator-actions {
+  width: 50px;
+  flex-direction: column;
+}
+.calculator-actions button {
+  background: rgb(247, 146, 49);
+  color: white;
+  border-right: none;
+}
+
+.calculator-key {
+  font-size: 24px;
+  border-bottom: 1px solid rgb(143, 143, 143);
+  border-right: 1px solid rgb(143, 143, 143);
+}
+.calculator-key:hover {
+  cursor: pointer;
+}
+
+.key-0 {
+  width: 100px;
+  text-align: left;
+  padding-left: 18px;
+  border-bottom: none;
+  border-bottom-left-radius: 5px
+}
+.key-dot {
+  border-bottom: none;
+}
+.key-compute {
+  border-bottom: none;
+  border-bottom-right-radius: 5px;
+}
+.key-divide {
+  position: relative;
+}
+.key-divide:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/division.png');
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
